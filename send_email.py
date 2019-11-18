@@ -13,10 +13,8 @@ def csv_read_by_dict():
     with open('email.csv',encoding='utf8') as fd:
         reader=csv.reader(fd)
         headers = next(reader)
-        print(headers)
         for row in reader:
             post_email(row[1],row[2],row[3])
-            print(row[0],row[1],row[2],row[3])
 
 def post_email(receivers,title, context):
     message = MIMEText(context, 'plain', 'utf-8')
