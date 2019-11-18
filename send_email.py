@@ -30,7 +30,7 @@ def post_email(receivers,title, context):
         smtpObj.quit()
         return 1
     except smtplib.SMTPException:
-        return 0
+        return None
 
 if __name__ == '__main__':
     csv_read_by_dict()
